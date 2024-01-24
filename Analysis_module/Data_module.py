@@ -2,9 +2,10 @@ from typing import Dict
 import pandas as pd
 import numpy as np
 
-class Data:
+class Data_module:
   def __init__(self) -> None:
-    print('hi from data')
+    self.apple_quality_data = pd.read_csv('./Data/apple_quality.csv')
+    self.student_data = pd.read_csv('./Data/student_data.csv',header=0, sep=';')
 
   def make_bootstraps(self, data: np.array, n_bootstraps: int=100) -> Dict[str, Dict[str, np.array]]:
 

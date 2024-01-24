@@ -10,18 +10,21 @@ class Graphics:
   def __init__(self) -> None:
     print('hi from graphics')
 
-  def plot_tree(self, tree_instance: DecisionTreeClassifier | DecisionTreeRegressor, feature_names: list, target, file_name: np.ndarray):
+  def plot_tree(self, tree_instance, feature_names: list[str], target, file_name: str):
+    if not isinstance(tree_instance, (DecisionTreeClassifier, DecisionTreeRegressor)):
+        raise TypeError("tree_instance must be a DecisionTreeClassifier or DecisionTreeRegressor")
+
     export_graphviz(
-      tree_instance,
-      out_file=file_name,
-      feature_names=feature_names,
-      class_names=target,
-      rounded=True,
-      filled=True
+        tree_instance,
+        out_file=file_name,
+        feature_names=feature_names,
+        class_names=target,
+        rounded=True,
+        filled=True
     )
 
     with open(file_name) as f:
-      dot_graph = f.read()
+        dot_graph = f.read()
 
     Source(dot_graph)
 
