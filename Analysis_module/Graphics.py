@@ -15,7 +15,7 @@ class Graphics:
         raise TypeError("tree_instance must be a DecisionTreeClassifier or DecisionTreeRegressor")
 
     export_graphviz(
-        tree_instance,
+        decision_tree=tree_instance,
         out_file=file_name,
         feature_names=feature_names,
         class_names=target,
