@@ -1,0 +1,9 @@
+https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+
+https://scikit-learn.org/stable/auto_examples/svm/plot_svm_kernels.html#sphx-glr-auto-examples-svm-plot-svm-kernels-py
+
+Data Science Cheat Sheets
+https://www.kaggle.com/datasets/timoboz/data-science-cheat-sheets
+
+
+https://scikit-learn.org/stable/modules/generated/sklearn.inspection.DecisionBoundaryDisplay.html

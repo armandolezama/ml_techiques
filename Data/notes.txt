@@ -1,0 +1,11 @@
+Dropout and Success: Student Data Analysis
+https://www.kaggle.com/datasets/marouandaghmoumi/dropout-and-success-student-data-analysis
+
+Netflix Movies and TV Shows
+https://www.kaggle.com/datasets/shivamb/netflix-shows
+
+COVID-19 Open Research Dataset Challenge (CORD-19)
+https://www.kaggle.com/datasets/allen-institute-for-ai/CORD-19-research-challenge
+
+Apple Quality
+https://www.kaggle.com/datasets/nelgiriyewithana/apple-quality
