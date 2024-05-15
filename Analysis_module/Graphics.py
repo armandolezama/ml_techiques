@@ -30,8 +30,8 @@ class Graphics:
 
   def plot_decision_boundary(self, svm:SVC, X, response_method, alpha, xlabel, ylabel):
     DecisionBoundaryDisplay.from_estimator(
-        svm,
-        X,
+        estimator=svm,
+        X=X,
         response_method=response_method,
         cmap=plt.cm.Spectral,
         alpha=alpha,
