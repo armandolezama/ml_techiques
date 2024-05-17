@@ -23,22 +23,32 @@ class Data_module:
     self.load_student_data()
 
   def load_boston_housing_data(self):
-    self.boston_housing_x, self.boston_housing_y = load_boston(return_X_y=True)
+    data = load_boston()
+    self.boston_housing_x = pd.DataFrame(data.data, columns=data.feature_names)
+    self.boston_housing_y = pd.Series(data.target, name='target')
 
   def load_iris_data(self):
-    self.iris_x, self.iris_y = load_iris(return_X_y=True)
+    data = load_iris()
+    self.iris_x = pd.DataFrame(data.data, columns=data.feature_names)
+    self.iris_y = pd.Series(data.target, name='target')
 
   def load_mnist_data(self):
-    self.minist_x, self.minist_y = fetch_openml('mnist_784', version=1, return_X_y=True)
+    X, y = fetch_openml('mnist_784', version=1, return_X_y=True, as_frame=True)
+    self.mnist_x = pd.DataFrame(X)
+    self.mnist_y = pd.Series(y, name='target')
 
   def load_breast_cancer_data(self):
-    self.breast_cancer_x, self.breast_cancer_y = load_breast_cancer(return_X_y=True)
+    data = load_breast_cancer()
+    self.breast_cancer_x = pd.DataFrame(data.data, columns=data.feature_names)
+    self.breast_cancer_y = pd.Series(data.target, name='target')
 
   def load_mall_customer_data(self):
     self.mall_customer_x = self.load_mall_customer()
 
   def load_digits_data(self):
-    self.digits_x, self.digits_y = load_digits(return_X_y=True)
+    data = load_digits()
+    self.digits_x = pd.DataFrame(data.data, columns=[f'pixel_{i}' for i in range(data.data.shape[1])])
+    self.digits_y = pd.Series(data.target, name='target')
 
   def load_apple_quality_data(self):
     self.apple_quality_data = pd.read_csv('./Data/apple_quality.csv')
