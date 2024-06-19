@@ -19,6 +19,7 @@ El proyecto está organizado en varios notebooks, cada uno dedicado a un conjunt
 7. `mall_customers_notebook.ipynb` - Análisis detallado del conjunto de datos Mall Customers.
 8. `apple_quality_notebook.ipynb` - Análisis detallado del conjunto de datos Apple Quality.
 9. `student_data_notebook.ipynb` - Análisis detallado del conjunto de datos Student Data.
+10. `Wholesale customers` - Análisis detallado del conjunto de datos Wholesale customers.
 
 Cada notebook incluye la carga de datos, exploración preliminar, aplicación de modelos, visualización de resultados y validación de modelos.
 
