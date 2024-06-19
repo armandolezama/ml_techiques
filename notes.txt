@@ -7,3 +7,17 @@ https://www.kaggle.com/datasets/timoboz/data-science-cheat-sheets
 
 
 https://scikit-learn.org/stable/modules/generated/sklearn.inspection.DecisionBoundaryDisplay.html
+
+
+PCA:
+https://cienciadedatos.net/documentos/35_principal_component_analysis
+
+
+Decision Trees explained with a practical example:
+https://towardsai.net/p/programming/decision-trees-explained-with-a-practical-example-fe47872d3b53
+
+40 Machine Learning Algorithms with Python
+https://medium.com/coders-camp/40-machine-learning-algorithms-with-python-3defd764b961
+
+Machine Learning Algorithms for Beginners with Popular Python Codes
+https://www.usaii.org/ai-insights/machine-learning-algorithms-for-beginners-with-popular-python-codes
