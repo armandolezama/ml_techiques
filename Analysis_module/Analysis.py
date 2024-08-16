@@ -1,6 +1,7 @@
-import pandas as pd
-import numpy as np
 from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
+from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 
 class Analysis:
@@ -13,11 +14,30 @@ class Analysis:
 
     return tree_instance
 
-  def get_svm_instance(self, X, y, kernel, gamma, C):
-    svm = SVC(kernel=kernel, gamma=gamma, C=C)
-    svm.fit(X, y)
+  def support_vector_machine(self, X, y):
+    model = SVC()
+    model.fit(X, y)
+    return model
 
-    return svm
+  def perform_decision_tree(self, X, y):
+    model = DecisionTreeClassifier()
+    model.fit(X, y)
+    return model
 
-  def get_random_forest(self):
-    print('hello')
+  def perform_linear_regression(self, X, y):
+    model = LinearRegression()
+    model.fit(X, y)
+    return model
+
+  def logistic_regression(self, X, y):
+    model = LogisticRegression()
+    model.fit(X, y)
+    return model
+
+  def neural_network(self, X, y):
+    model = MLPClassifier()
+    model.fit(X, y)
+    return model
+
+  def validate_model(self, model, X, y):
+    return model.score(X, y)

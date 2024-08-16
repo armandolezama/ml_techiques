@@ -4,6 +4,7 @@ from sklearn.datasets import load_iris
 from sklearn.datasets import fetch_openml
 from sklearn.datasets import load_breast_cancer
 from sklearn.datasets import load_digits
+from sklearn.datasets import make_blobs
 import pandas as pd
 import numpy as np
 import pandas as pd
@@ -21,6 +22,7 @@ class Data_module:
     self.load_digits_data()
     self.load_apple_quality_data()
     self.load_student_data()
+    self.load_geolocation()
 
   def load_boston_housing_data(self):
     data = load_boston()
@@ -58,6 +60,23 @@ class Data_module:
 
   def load_mall_customer(self):
     return pd.read_csv('./Data/Mall_Customers.csv')
+
+  def load_geolocation():
+
+    # Generar datos de ejemplo con blobs
+    n_samples = 1500
+    random_state = 170
+    X, _ = make_blobs(n_samples=n_samples, random_state=random_state)
+
+    # Crear un DataFrame con los datos generados
+    geolocation_df = pd.DataFrame(X, columns=['latitude', 'longitude'])
+
+    # Agregar columnas adicionales para simular un conjunto de datos real
+    geolocation_df['customer_id'] = range(1, n_samples + 1)
+    geolocation_df['purchase_amount'] = np.random.uniform(10, 1000, n_samples)
+    geolocation_df['visit_time'] = pd.date_range(start='1/1/2022', periods=n_samples, freq='H')
+
+    return geolocation_df
 
   def make_bootstraps(self, data: np.array, n_bootstraps: int=100) -> Dict[str, Dict[str, np.array]]:
 
